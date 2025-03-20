@@ -96,7 +96,43 @@
 // const {name: carName} = car;  // **************
 // console.log(carName);
 
+// ---------------- Object Reference ----------------------
+
+// const person = {
+//     name: 'John',
+//     email: 'john@gmail.com',
+//     age: 20
+// };
+
+// Shallow copy
+// const person2 = person; // share same reference, this is not a copy.
+// person2.name = 'Sanjay';
+//
+// console.log({person2});
+// console.log({person});
+
+// ------------------- Pass by Reference -------------------
+
+// function updateAge(ref) {
+//     ref.age = 35; // Modifies the original value because it's a pass by ref.
+// }
+// updateAge(person);
 
 
-// ------------------- Method of Object --------------------
+// ================= Deep Copy ========================
+// const person = {
+//     name: 'John',
+//     email: 'john@gmail.com',
+//     age: 20
+// };
+
+// console.log(person);
+// console.log(JSON.stringify(person));
+// console.log(JSON.parse(JSON.stringify(person)));
+// const person2 = JSON.parse(JSON.stringify(person));
+// person2.name = 'Sanjay';
+// console.log(person);
+// console.log(person2);
+
+
 
