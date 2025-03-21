@@ -48,6 +48,7 @@
 //
 // person.vote()
 
+// this keyword -> refers to the context where it defined, such as a function's body is supposed to run.
 // const person = {
 //     name: 'John',
 //     email: 'john@gmail.com',
@@ -116,15 +117,18 @@
 // function updateAge(ref) {
 //     ref.age = 35; // Modifies the original value because it's a pass by ref.
 // }
+// console.log(person);
 // updateAge(person);
+// console.log(person);
+
+// Doesn't work in arrow function
+//const value = (ref) => { //
+    // ref.age = 45;
+//}
 
 
 // ================= Deep Copy ========================
-// const person = {
-//     name: 'John',
-//     email: 'john@gmail.com',
-//     age: 20
-// };
+//
 
 // console.log(person);
 // console.log(JSON.stringify(person));
@@ -133,6 +137,4 @@
 // person2.name = 'Sanjay';
 // console.log(person);
 // console.log(person2);
-
-
 
