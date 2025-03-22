@@ -104,8 +104,8 @@
 //     email: 'john@gmail.com',
 //     age: 20
 // };
-
-// Shallow copy
+//
+// // Shallow copy
 // const person2 = person; // share same reference, this is not a copy.
 // person2.name = 'Sanjay';
 //

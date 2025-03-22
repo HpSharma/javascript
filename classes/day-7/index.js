@@ -67,4 +67,3 @@ const person = {name: 'Sanjay', email: 'sanjay@gmail.com'};
 
 // console.log(Object.hasOwnProperty('name'));
 // console.log(Object.hasOwnProperty('age'));
-
