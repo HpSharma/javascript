@@ -1,0 +1,36 @@
+button {
+    padding: 10px;
+    border: none;
+    background: #e6e6e6;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+        background: #fd5c63;
+    }
+}
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    h1 {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h4 {
+        margin-bottom: 5px;
+    }
+}
+
+#restartQuiz:hover {
+    background: #f8e741;
+}
