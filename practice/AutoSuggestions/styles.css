@@ -1,0 +1,25 @@
+input {
+    width: 200px;
+    padding: 10px 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.autocomplete {
+    width: 210px;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    div {
+        padding: 10px 5px;
+        cursor: pointer;
+    }
+    div:hover {
+        background-color: #fbf768;
+    }
+}

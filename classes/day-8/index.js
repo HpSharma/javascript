@@ -10,7 +10,7 @@
 // console.log(arr[0]);
 // arr[arr.length -1]();
 
-// let value = [10, 20, 30, 40, 50];
+let value = [10, 20, 30, 40, 50];
 
 // let [a, b] = value;
 // console.log(a, b);
@@ -108,4 +108,6 @@
 // let result = value.concat([60, 70, 80]);
 // console.log(result);
 
-
+// filter
+// const filterData = value.filter(val => val === 30);
+// console.log(filterData);
