@@ -43,9 +43,13 @@ const FILES_STRUCTURE = Object.freeze({
             ]
         },
         {
+            name: 'src',
+            type: FOLDER_TYPE,
+        },
+        {
             name: 'package.json',
             type: FILE_TYPE,
-        }
+        },
     ]
 });
 
@@ -62,10 +66,18 @@ const createFileElement = (file) => {
         folderContent.classList.add('folder-content');
         folderContent.style.display = 'none';
 
-        file.children.forEach(child => {
+        // if (file.hasOwnProperty('children')) {
+        //     file.children.forEach(child => {
+        //         const childElement = createFileElement(child);
+        //         folderContent.appendChild(childElement);
+        //     });
+        // }
+
+        file.children?.forEach(child => {
             const childElement = createFileElement(child);
             folderContent.appendChild(childElement);
         });
+
         div.style.marginLeft = '20px';
         div.appendChild(folderContent);
     } else {
