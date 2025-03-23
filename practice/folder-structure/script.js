@@ -54,7 +54,7 @@ const createFileElement = (file) => {
     div.style.cursor = 'pointer';
     if (file.type === FOLDER_TYPE) {
         const folderName = document.createElement('div');
-        folderName.textContent = `${file.name} \\`;
+        folderName.textContent = '📁' + file.name;
         folderName.addEventListener('click', () => handleFolderClick(div));
 
         div.appendChild(folderName);
@@ -70,7 +70,7 @@ const createFileElement = (file) => {
         div.appendChild(folderContent);
     } else {
         div.style.marginLeft = '20px';
-        div.textContent = file.name;
+        div.textContent = '📄' + file.name;
     }
     return div;
 }
