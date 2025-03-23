@@ -30,16 +30,22 @@ const SUGGESTIONS_DATA = [
     "Zucchini"
 ];
 
-// function throttling(showAutoSuggestions, delay) {
-//     let lastCallTime = 0;
-//     return function(...args) {
-//         const now = new Date().getTime();
-//         if (now - lastCallTime >= delay) {
-//             showAutoSuggestions(...args);
-//             lastCallTime = now;
-//         }
-//     }
-// }
+function throttling(showAutoSuggestions, delay) {
+    let lastCallTime = 0;
+    let timeoutId;
+    return function(...args) {
+        const now = new Date().getTime();
+        clearTimeout(timeoutId);
+        if (now - lastCallTime >= delay) {
+            showAutoSuggestions(...args);
+            lastCallTime = now;
+        } else {
+            timeoutId = setTimeout(() => {
+                showAutoSuggestions(...args);
+            }, delay - (now - lastCallTime));
+        }
+    }
+}
 
 function debounce(callback, wait) {
     let timeoutId;
@@ -72,10 +78,10 @@ function showAutoSuggestions(query) {
     }
 }
 
-// const throttleFunction = throttling(showAutoSuggestions, 2000);
-const debounceFunction = debounce(showAutoSuggestions, 500);
+const throttleFunction = throttling(showAutoSuggestions, 2000);
+// const debounceFunction = debounce(showAutoSuggestions, 500);
 
 searchInput.addEventListener('input', (event) => {
-    // throttleFunction(event.target.value);
-    debounceFunction(event.target.value);
+    throttleFunction(event.target.value);
+    // debounceFunction(event.target.value);
 })
