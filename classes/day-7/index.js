@@ -3,7 +3,7 @@
 // 1. assign
 
 // const car = {model: 'Harrier', brand: 'Tata'};
-const person = {name: 'Sanjay', email: 'sanjay@gmail.com'};
+// const person = {name: 'Sanjay', email: 'sanjay@gmail.com'};
 
 // const mergedObject = Object.assign(car, person);
 // console.log(person);
