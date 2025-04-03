@@ -49,7 +49,7 @@ const promise = new Promise((resolve, reject) => {
     if (!success) {
         setTimeout(() => {
             resolve(123);
-        }, 5000)
+        }, 5000);
     } else {
         reject("Operation failed!");
     }
@@ -60,4 +60,4 @@ promise
     .then((data) => console.log("Operation complete", data))
     .catch((err) => console.log(err));
 
-console.log("......Other operations......")
+console.log("......Other operations......");
