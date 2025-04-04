@@ -1,35 +1,43 @@
 const promise1 = new Promise((fulfilled, refused) => {
     setTimeout(() => {
+        console.log("promise1");
         fulfilled(1);
-    }, 1000);
+    }, 3000);
 });
 
 const promise2 = new Promise((resolve, reject) => {
     setTimeout(() => {
+        console.log("promise2");
         resolve(2);
-    }, 2000);
+    }, 1000);
 });
 
 const promise3 = new Promise((resolve, reject) => {
     setTimeout(() => {
+        console.log("promise3");
         resolve(3);
-    }, 500);
+    }, 1500);
 });
 
+console.log("Starting...");
 
-// promise1
-//     .then((result) => {
-//         console.log(`Promise ${result} operation done! => ${new Date().getTime()}ms`);
-//         return promise2;
-//     })
-//     .then((result) => {
-//         console.log(`Promise ${result} operation done! => ${new Date().getTime()}ms`);
-//         return promise3;
-//     })
-//     .then((result) => {
-//         console.log(`Promise ${result} operation done!  ${new Date().getTime()}ms`);
-//     })
-//     .catch(error => console.log(error));
+promise1
+    .then((result1) => {
+        console.log(`Promise ${result1} operation done! => ${new Date().getTime()}ms`);
+        // Return the next promise (promise2)
+        return promise2;
+    })
+    .then((result2) => {
+        console.log(`Promise ${result2} operation done! => ${new Date().getTime()}ms`);
+        // Return the next promise (promise3)
+        return promise3;
+    })
+    .then((result3) => {
+        console.log(`Promise ${result3} operation done! => ${new Date().getTime()}ms`);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 
 // --------- resolve, reject, all(), allSettled(), any(), race()
