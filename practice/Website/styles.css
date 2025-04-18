@@ -1,17 +1,75 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.main-container {
-    height: calc(100vh - 22px);
-    margin: 10px;
-    padding: 20px;
-    background-color: #7063cd;
-    border-radius: 25px;
+body {
+  margin: 0;
+  padding: 0;
+  color: #151515;
+}
 
-    h3 {
-        margin: 0;
-        display: inline-block;
-        letter-spacing: 5px;
-    }
+/* ------------ START:: Button style ------------ */
+button {
+  height: 32px;
+  padding: 0px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary {
+  color: white;
+  background-color:  rgba(33, 15, 55, 0.8);
+}
+
+.primary:hover {
+  background-color:  rgba(33, 15, 55, 1);
+}
+
+.secondary {
+  color: #151515;
+  border: 1px solid #4F1C51;
+}
+
+.secondary:hover {
+  color: white;
+  background-color: #4F1C51;
+}
+
+/* ------------ END:: Button style ------------ */
+
+
+.main-container {
+
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  padding: 0px 24px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 2px 2px 2px #ccc;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+    display: inline-block;
+  }
+}
+
+.menu {
+  display: flex;
+  column-gap: 16px;
+}
+
+.main-content {
+  height: 500px;
+  background-image: url("./assets/home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
