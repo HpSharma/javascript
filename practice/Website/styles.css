@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: calc(100vh - 22px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #7063cd;
+    border-radius: 25px;
+
+    h3 {
+        margin: 0;
+        display: inline-block;
+        letter-spacing: 5px;
+    }
+}
