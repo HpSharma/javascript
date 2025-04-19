@@ -17,6 +17,15 @@ button {
   cursor: pointer;
 }
 
+button[disabled] {
+  cursor: default;
+  background-color: #ccc;
+}
+
+button[disabled]:hover {
+  background-color: #ccc;
+}
+
 .primary {
   color: white;
   background-color:  rgba(33, 15, 55, 0.8);
@@ -39,9 +48,21 @@ button {
 /* ------------ END:: Button style ------------ */
 
 
-.main-container {
+/* ------------ START:: Input style ------------ */
 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  height: 32px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #4F1C51;
+  padding: 0px 5px;
 }
+
+
+/* ------------ END:: Input style ------------ */
+
 
 nav {
   height: 50px;

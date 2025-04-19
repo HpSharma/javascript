@@ -1,0 +1,7 @@
+.main-content {
+  height: 500px;
+  background-image: url("./assets/home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

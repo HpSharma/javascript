@@ -15,7 +15,7 @@ const FILES_STRUCTURE = Object.freeze({
                     children: [
                         {name:'index.html', type: FILE_TYPE},
                         {name:'index.js', type: FILE_TYPE},
-                        {name:'styles.css', type: FILE_TYPE},
+                        {name:'register.css', type: FILE_TYPE},
                     ],
                 },
                 {
@@ -37,7 +37,7 @@ const FILES_STRUCTURE = Object.freeze({
                     children: [
                         {name:'index.html', type: FILE_TYPE},
                         {name:'script.js', type: FILE_TYPE},
-                        {name:'styles.css', type: FILE_TYPE},
+                        {name:'register.css', type: FILE_TYPE},
                     ],
                 },
             ]
